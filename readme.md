@@ -3,9 +3,9 @@
 ## Run :
 
 ```.bash
-    git clone https://github.com/theoddorrrrr/goods-shop.git
+    git clone https://github.com/theoddorrrrr/uber-eats.git
 
-    cd goods-shop
+    cd uber-eats
 
     npm install
 ```
@@ -13,13 +13,13 @@
 ### After initialization the project - run:
 
 ```.bash
-    npm start
+    npm run start
 ```
 
-### or
+### for development or
 
 ```.bash
-    webpack
+    npm run build
 ```
 
-### to get (dist) folder, which containts all files to run site.
+### to get (dist) folder, which containts all minificated files to run site.
