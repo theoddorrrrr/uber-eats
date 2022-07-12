@@ -1,0 +1,18 @@
+.restraunt {
+  max-width: 470px;
+  height: 160px;
+  padding: 16px;
+
+  background: #75757507;
+  mix-blend-mode: normal;
+
+  border: 1px solid rgba(117, 117, 117, 0.2);
+  border-radius: 2px;
+}
+
+.restraunts {
+  &__body {
+    margin-top: 93px;
+    padding: 0 13px;
+  }
+}

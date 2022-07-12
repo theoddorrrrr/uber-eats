@@ -39,6 +39,10 @@ button {
   cursor: pointer;
 }
 
+.main {
+    background-color: #e5e5e51f;
+}
+
 .btn {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -54,7 +58,7 @@ button {
 
   border-radius: 2px;
   transition: 0.3s ease;
-  border: 1px solid black;
+  border: 1px solid #E0E0E0;
 }
 
 .btn:hover {
