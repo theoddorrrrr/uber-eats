@@ -1,0 +1,142 @@
+.restraunt__body {
+  padding: 0 4px 40px 8px;
+}
+.restraunt__logo {
+  width: 100%;
+  height: 255px;
+  background-image: url("./assets/pushkin/main-mobile.png");
+  background-size: cover;
+
+  position: relative;
+}
+.restraunt__info {
+  position: absolute;
+  left: 8px;
+  right: 4px;
+  top: 131px;
+  height: 180px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background: #ffffff;
+  box-shadow: 0px 0px 16px rgba(117, 117, 117, 0.2);
+  border-radius: 2px;
+}
+.restraunt__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 24px;
+}
+.restraunt__subtitle {
+  font-size: 14px;
+  line-height: 16px;
+
+  margin-top: 40px;
+  color: #626262;
+}
+.restraunt__time {
+  background: #262626;
+  width: 98px;
+  height: 32px;
+
+  border-radius: 16px;
+  margin-top: 16px;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.restraunt__menu {
+  padding-top: 113px;
+  text-align: center;
+}
+
+.restraunt__select {
+  position: relative;
+  padding: 0 0 56px 0;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 1px;
+    left: 50%;
+    bottom: 44px;
+    transform: translateX(-50%);
+
+    background: #757575;
+  }
+}
+
+.restraunt-item {
+  display: flex;
+  justify-content: space-between;
+
+  text-align: left;
+  position: relative;
+
+  max-width: 308px;
+  height: 102px;
+}
+.restraunt-item + .restraunt-item {
+    margin-top: 16px;
+}
+
+.restraunt-item__info {
+//   flex: 1 1 auto;
+}
+.restraunt-item__title {
+  font-size: 14px;
+  line-height: 24px;
+  color: #1d1d1d;
+}
+.restraunt-item__subtitle {
+  font-size: 13px;
+  line-height: 21px;
+  margin-top: 4px;
+  color: #626262;
+}
+.restraunt-item__price {
+  font-size: 15px;
+  line-height: 21px;
+  margin-top: 16px;
+  color: #1d1d1d;
+}
+.restraunt-item__img {
+//   flex: 1 1 102px;
+height: 102px;
+width: 102px;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.restraunt-item__border {
+  position: absolute;
+  left: 0%;
+  right: 0.33%;
+  top: 99.02%;
+  bottom: 0%;
+  width: 100%;
+  height: 1px;
+
+  background: #757575;
+  mix-blend-mode: normal;
+  opacity: 0.2;
+}
+
+@media (min-width: $grid-breakpoints-sm) {
+  .restraunt__logo {
+    background-image: url("./assets/pushkin/main.png");
+    height: 364px;
+  }
+}

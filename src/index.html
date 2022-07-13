@@ -10,11 +10,12 @@
     <header class="header">
       <div class="container">
         <div class="header__body">
-          <img
-            class="header__logo"
-            src="./assets/logo/logo-header.svg"
-            alt="Logo"
-          />
+          <a href="index.html"
+            ><img
+              class="header__logo"
+              src="./assets/logo/logo-header.svg"
+              alt="Logo"
+          /></a>
           <div class="auth-buttons">
             <button class="btn btn_inherit">Sign In</button>
             <button class="btn btn_black">Register</button>
@@ -24,24 +25,44 @@
     </header>
     <main class="restraunts">
       <div class="container">
-        <div class="restraunts__body row gx-5">
-            <section class="restraunt col-5">
-                <h2 class="restraunt__title">Трактир “Пушкин”</h2>
-                <h4 class="restraunt__subtitle">Европейская кухня</h4>
-                <span class="restraunt__time">40-50 мин</span>
-              </section>
-              <section class="restraunt col-5">
-                <h2 class="restraunt__title">Трактир “Пушкин”</h2>
-                <h4 class="restraunt__subtitle">Европейская кухня</h4>
-                <span class="restraunt__time">40-50 мин</span>
-              </section>
-              <section class="restraunt col-5">
-                <h2 class="restraunt__title">Трактир “Пушкин”</h2>
-                <h4 class="restraunt__subtitle">Европейская кухня</h4>
-                <span class="restraunt__time">40-50 мин</span>
-              </section>
+        <div class="restraunts__body row gy-5 justify-content-between">
+          <section class="restraunts-item mx-auto mx-lg-0 col-lg-6">
+            <a href="pushkin.html"
+              ><h2 class="restraunts-item__title">Трактир “Пушкин”</h2>
+              <h4 class="restraunts-item__subtitle">Европейская кухня</h4>
+              <span class="restraunts-item__time">40-50 мин</span></a
+            >
+          </section>
+          <section class="restraunts-item mx-auto mx-lg-0 col-lg-6">
+            <a href="pushkin.html"
+              ><h2 class="restraunts-item__title">Хачапурная №1</h2>
+              <h4 class="restraunts-item__subtitle">Грузинская кухня</h4>
+              <span class="restraunt-item__time">20-40 мин</span></a
+            >
+          </section>
+          <section class="restraunts-item mx-auto mx-lg-0 col-lg-6">
+            <a href="pushkin.html">
+              <h2 class="restraunts-item__title">Суши-бар “Самурай”</h2>
+              <h4 class="restraunts-item__subtitle">Японская кухня</h4>
+              <span class="restraunts-item__time">30-60 мин</span>
+            </a>
+          </section>
         </div>
       </div>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__body">
+          <a href="index.html"
+            ><img
+              class="footer__logo"
+              src="./assets/logo/footer-logo.svg"
+              alt="Logo"
+          /></a>
+          <hr class="footer__divider" />
+          <p class="footer__copy">© 2017 Uber Technologies Inc.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

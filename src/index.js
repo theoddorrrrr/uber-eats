@@ -1,5 +1,5 @@
 import 'bootstrap'
 import "normalize.css"
-import "./scss/style.scss"
+import "./style.scss"
 
 console.log('Aidar')

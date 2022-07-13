@@ -1,0 +1,30 @@
+.footer {
+  background-color: #262626;
+
+  &__logo {
+    margin-top: 68px;
+  }
+
+  &__body {
+    height: 234px;
+    padding: 0 9px;
+  }
+
+  &__divider {
+    color: #979797;
+    margin-top: 38px;
+  }
+
+  &__copy {
+    color: #ffffff;
+    margin-top: 40px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  @media (max-width: $grid-breakpoints-sm) {
+    &__logo {
+      margin-top: 55px;
+    }
+  }
+}

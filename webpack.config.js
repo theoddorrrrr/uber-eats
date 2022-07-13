@@ -21,13 +21,14 @@ module.exports = {
     },
   },
   plugins: [
-    new HTMLWebpackPlugin({ template: "./src/index.html" }),
+    new HTMLWebpackPlugin({ filename: "index.html", template: "./src/index.html" }),
+    new HTMLWebpackPlugin({ filename: "pushkin.html", template: "./src/pushkin.html" }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, "./src/assets"),
-          to: path.resolve(__dirname, "dist"),
+          to: path.resolve(__dirname, "dist/assets"),
         },
       ],
     }),
