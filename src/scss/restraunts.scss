@@ -14,6 +14,8 @@
   &__title {
     font-size: 16px;
     line-height: 24px;
+    font-weight: 600;
+    opacity: 0.8;
 
     width: 180px;
     white-space: nowrap;
@@ -36,8 +38,9 @@
   &__time {
     display: block;
     font-size: 15px;
+    font-weight: 600;
+
     line-height: 21px;
-    font-weight: 500;
     margin-top: 58px;
   }
 }
@@ -61,6 +64,10 @@
   .restraunts-item__subtitle {
     width: 520px;
   }
+
+  .restraunts-item {
+    max-width: 495px;
+  }
 }
 
 @media (min-width: $grid-breakpoints-lg) {
@@ -68,9 +75,13 @@
   .restraunts-item__subtitle {
     width: 400px;
   }
+
+  .restraunts-item {
+    max-width: 470px;
+  }
 }
 
-@media (max-width: $grid-breakpoints-lg) {
+@media (max-width: $grid-breakpoints-md) {
   .restraunts-item {
     max-width: 95%;
   }

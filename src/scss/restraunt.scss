@@ -121,6 +121,8 @@
   font-size: 14px;
   line-height: 24px;
   color: #1d1d1d;
+  font-weight: 550;
+  opacity: 0.8;
 
   width: 180px;
   white-space: nowrap;
@@ -138,6 +140,8 @@
   font-size: 15px;
   line-height: 21px;
   margin-top: 16px;
+  font-weight: 600;
+
   color: #1d1d1d;
 }
 .restraunt-item__img {
@@ -257,6 +261,7 @@
   .restraunt-item {
     max-width: 70%;
     height: 160px;
+    cursor: pointer;
 
     border: 1px solid rgba(117, 117, 117, 0.2);
     border-radius: 2px;
@@ -284,6 +289,7 @@
     font-size: 13px;
     line-height: 15px;
     cursor: pointer;
+    font-weight: 600;
 
     position: absolute;
     right: 30px;
@@ -336,9 +342,9 @@
   }
 
   .restraunt-item__title {
-    width: 290px;
+    width: 270px;
   }
   .restraunt-item__subtitle {
-    width: 290px;
+    width: 270px;
   }
 }
