@@ -2,30 +2,35 @@
   max-width: 470px;
   height: 160px;
   padding: 16px;
-
-  // background: #75757507;
   mix-blend-mode: normal;
-
   border: 1px solid rgba(117, 117, 117, 0.2);
   border-radius: 2px;
-
-  margin-left: 12px;
   transition: 0.3s ease;
 
   &:hover {
     background-color: #7575750c;
   }
+
   &__title {
     font-size: 16px;
     line-height: 24px;
+
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  
+
   &__subtitle {
     font-size: 13px;
     line-height: 21px;
     margin-top: 4px;
 
     color: #626262;
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__time {
@@ -41,5 +46,39 @@
   &__body {
     margin: 45px 0 144px 0;
     padding: 0 17px 0 8px;
+  }
+}
+
+@media (min-width: $grid-breakpoints-sm) {
+  .restraunts-item__title,
+  .restraunts-item__subtitle {
+    width: 450px;
+  }
+}
+
+@media (min-width: $grid-breakpoints-md) {
+  .restraunts-item__title,
+  .restraunts-item__subtitle {
+    width: 520px;
+  }
+}
+
+@media (min-width: $grid-breakpoints-lg) {
+  .restraunts-item__title,
+  .restraunts-item__subtitle {
+    width: 400px;
+  }
+}
+
+@media (max-width: $grid-breakpoints-lg) {
+  .restraunts-item {
+    max-width: 95%;
+  }
+
+  .restraunts {
+    &__body {
+      margin: 0 0 50px 0;
+      padding: 0 17px 0 17px;
+    }
   }
 }

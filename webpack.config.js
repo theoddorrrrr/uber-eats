@@ -21,8 +21,10 @@ module.exports = {
     },
   },
   plugins: [
-    new HTMLWebpackPlugin({ filename: "index.html", template: "./src/index.html" }),
-    new HTMLWebpackPlugin({ filename: "pushkin.html", template: "./src/pushkin.html" }),
+    new HTMLWebpackPlugin({ filename: "index.html", template: "./src/pages/index.html" }),
+    new HTMLWebpackPlugin({ filename: "pushkin.html", template: "./src/pages/pushkin.html" }),
+    new HTMLWebpackPlugin({ filename: "hachapury.html", template: "./src/pages/hachapury.html" }),
+    new HTMLWebpackPlugin({ filename: "samurai.html", template: "./src/pages/samurai.html" }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
