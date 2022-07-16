@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -21,10 +22,22 @@ module.exports = {
     },
   },
   plugins: [
-    new HTMLWebpackPlugin({ filename: "index.html", template: "./src/pages/index.html" }),
-    new HTMLWebpackPlugin({ filename: "pushkin.html", template: "./src/pages/pushkin.html" }),
-    new HTMLWebpackPlugin({ filename: "hachapury.html", template: "./src/pages/hachapury.html" }),
-    new HTMLWebpackPlugin({ filename: "samurai.html", template: "./src/pages/samurai.html" }),
+    new HTMLWebpackPlugin({
+      filename: "index.html",
+      template: "./src/pages/index.html",
+    }),
+    new HTMLWebpackPlugin({
+      filename: "pushkin.html",
+      template: "./src/pages/pushkin.html",
+    }),
+    new HTMLWebpackPlugin({
+      filename: "hachapury.html",
+      template: "./src/pages/hachapury.html",
+    }),
+    new HTMLWebpackPlugin({
+      filename: "samurai.html",
+      template: "./src/pages/samurai.html",
+    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
       patterns: [
@@ -43,12 +56,12 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(s[ac]ss)$/,
+        test: /\.(s[ac]ss)$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|jpg|jpeg|svg)$/,
-        type: "asset/resource",
+        test: /\.(jpe?g|png)$/i,
+        type: "asset",
       },
       {
         test: /\.(ttf)/,
@@ -60,10 +73,32 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
-          }
+            presets: ["@babel/preset-env"],
+          },
         },
       },
+    ],
+  },
+  optimization: {
+    minimizer: [
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.squooshMinify,
+          options: {
+            encodeOptions: {
+              mozjpeg: {
+                quality: 100,
+              },
+              webp: {
+                lossless: 1,
+              },
+              avif: {
+                cqLevel: 0,
+              },
+            },
+          },
+        },
+      }),
     ],
   },
 };
